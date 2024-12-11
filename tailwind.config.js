@@ -5,10 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        poppins: ['Lato', 'sans-serif'],
       },
       colors: {
-        abu: '#eee'
+        abu: '#eee',
+        ya: '#222'
       },
     },
   },
