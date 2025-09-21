@@ -51,6 +51,7 @@ module.exports = {
           light: '#f8fafc',
         }
       },
+      darkMode: ['class', '[data-theme="dark"]'],
       data: {
         theme: '[data-theme]'
       },

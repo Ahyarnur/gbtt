@@ -85,7 +85,7 @@ body::before {
 }
 
 /* Light theme background pattern */
-[data-theme="light"] body::before {
+.light body::before {
   background: repeating-linear-gradient(
     45deg,
     transparent,
@@ -149,6 +149,44 @@ a {
   background: rgba(248, 250, 252, 0.85);
   border: 1px solid rgba(124, 58, 237, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Light theme text colors */
+[data-theme="light"] {
+  color: rgb(15, 23, 42);
+}
+
+[data-theme="light"] .text-white {
+  color: rgb(15, 23, 42) !important;
+}
+
+[data-theme="light"] .text-gray-300 {
+  color: rgb(71, 85, 105) !important;
+}
+
+[data-theme="light"] .text-gray-400 {
+  color: rgb(100, 116, 139) !important;
+}
+
+[data-theme="light"] .text-gray-500 {
+  color: rgb(148, 163, 184) !important;
+}
+
+/* Light theme backgrounds */
+[data-theme="light"] .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .bg-white\/10 {
+  background-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+[data-theme="light"] .hover\:bg-white\/10:hover {
+  background-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+[data-theme="light"] .hover\:bg-white\/5:hover {
+  background-color: rgba(15, 23, 42, 0.05) !important;
 }
 
 /* Gradient text with updated colors */
