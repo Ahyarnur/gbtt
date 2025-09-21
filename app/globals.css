@@ -12,6 +12,24 @@
   --custom-purple: #9333ea;
 }
 
+/* Light theme */
+:root[data-theme="light"] {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 248, 250, 252;
+  --custom-black: #f8fafc;
+  --custom-purple: #7c3aed;
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+  --foreground-rgb: 248, 250, 252;
+  --background-start-rgb: 33, 28, 28;
+  --background-end-rgb: 33, 28, 28;
+  --custom-black: #211c1c;
+  --custom-purple: #9333ea;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 248, 250, 252;
@@ -32,7 +50,8 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: 'JetBrains Mono', monospace;
-  background-color: #211c1c;
+  background-color: var(--custom-black);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
@@ -46,6 +65,7 @@ body {
   position: relative;
 }
 
+/* Dark theme background pattern */
 body::before {
   content: '';
   position: fixed;
@@ -62,6 +82,17 @@ body::before {
   );
   pointer-events: none;
   z-index: -1;
+}
+
+/* Light theme background pattern */
+[data-theme="light"] body::before {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 2px,
+    rgba(124, 58, 237, 0.05) 2px,
+    rgba(124, 58, 237, 0.05) 4px
+  );
 }
 
 a {
@@ -92,11 +123,17 @@ a {
   background: rgba(33, 28, 28, 0.8);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(147, 51, 234, 0.2);
+  transition: all 0.3s ease;
 }
 
 .dark .glass {
   background: rgba(33, 28, 28, 0.9);
   border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+[data-theme="light"] .glass {
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(124, 58, 237, 0.2);
 }
 
 /* Enhanced glass blur for bottom menu */
@@ -105,6 +142,13 @@ a {
   backdrop-filter: blur(16px);
   border: 1px solid rgba(147, 51, 234, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .glass-blur {
+  background: rgba(248, 250, 252, 0.85);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* Gradient text with updated colors */

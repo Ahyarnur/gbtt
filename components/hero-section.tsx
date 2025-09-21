@@ -14,7 +14,7 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-custom-black via-dark-950 to-primary-900/20 texture-lines">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-custom-black via-dark-950 to-primary-900/20 texture-lines dark:from-custom-black dark:via-dark-950 dark:to-primary-900/20 data-[theme=light]:from-slate-50 data-[theme=light]:via-slate-100 data-[theme=light]:to-primary-100/20">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-48 md:w-72 h-48 md:h-72 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
