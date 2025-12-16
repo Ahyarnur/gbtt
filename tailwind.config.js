@@ -6,7 +6,6 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -14,42 +13,44 @@ module.exports = {
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#9333ea',
-          600: '#7c3aed',
-          700: '#6b21a8',
-          800: '#581c87',
-          900: '#4c1d95',
-          950: '#3b0764',
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        dark: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#211c1c', // Your custom color
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          purple: '#9333ea',
-          dark: '#211c1c',
-          light: '#f8fafc',
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
-        custom: {
-          black: '#211c1c',
-          purple: '#9333ea',
-          light: '#f8fafc',
-        }
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -59,9 +60,9 @@ module.exports = {
         'slide-right': 'slideRight 0.5s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
         'float': 'float 3s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'typing': 'typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite',
         'scroll-text': 'scrollText 25s linear infinite',
+        'highlight': 'highlight 0.6s ease forwards',
+        'flash': 'flash 0.6s ease forwards',
       },
       keyframes: {
         fadeIn: {
@@ -92,21 +93,23 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
         },
-        glow: {
-          '0%': { boxShadow: '0 0 5px #9333ea, 0 0 10px #9333ea, 0 0 15px #9333ea' },
-          '100%': { boxShadow: '0 0 10px #9333ea, 0 0 20px #9333ea, 0 0 30px #9333ea' },
-        },
         scrollText: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        highlight: {
+          "0%": { backgroundColor: "transparent" },
+          "100%": { backgroundColor: "var(--highlight)" },
+        },
+        flash: {
+          "0%": { backgroundColor: "hsl(var(--card))" },
+          "50%": { backgroundColor: "var(--highlight)" },
+          "100%": { backgroundColor: "hsl(var(--card))" },
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'purple-gradient': 'linear-gradient(135deg, #9333ea 0%, #7c3aed 100%)',
-        'dark-gradient': 'linear-gradient(135deg, #211c1c 0%, #1e293b 100%)',
-        'texture-lines': 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(147, 51, 234, 0.1) 2px, rgba(147, 51, 234, 0.1) 4px)',
       },
       backdropBlur: {
         xs: '2px',

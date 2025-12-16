@@ -14,8 +14,8 @@ export function ContactSection() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'ahyarnurichwan@gmail.com',
-      href: 'mailto:ahyarnurichwan@gmail.com'
+      value: 'ahyarahyar5741@gmail.com',
+      href: 'mailto:ahyarahyar5741@gmail.com'
     },
     {
       icon: MapPin,
@@ -38,7 +38,7 @@ export function ContactSection() {
   ]
 
   return (
-    <section id="contact" className="py-12 md:py-16 lg:py-20 bg-dark-900/50 transition-colors duration-300 texture-lines">
+    <section id="contact" className="py-12 md:py-16 lg:py-20 bg-background transition-colors duration-300 texture-lines">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -50,7 +50,7 @@ export function ContactSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-4 md:mb-6 font-mono">
             Get In Touch
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-mono">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-mono">
             Let's connect and discuss opportunities or collaborations
           </p>
         </motion.div>
@@ -66,17 +66,17 @@ export function ContactSection() {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 font-mono">
               Contact Information
             </h3>
-            
+
             {contactInfo.map((info, index) => (
               <motion.div
                 key={info.label}
-                className="flex items-center space-x-4 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-primary-400/20 hover:bg-white/10 transition-all duration-300 border-glow"
+                className="flex items-center space-x-4 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 border-glow"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 whileHover={{ scale: 1.02, x: 4 }}
               >
-                <div className="p-3 rounded-lg bg-primary-600/20 text-primary-400 border border-primary-400/30">
+                <div className="p-3 rounded-lg bg-white/10 text-white border border-white/10">
                   <info.icon className="w-5 h-5" />
                 </div>
                 <div className="flex-1">
@@ -86,7 +86,7 @@ export function ContactSection() {
                       href={info.href}
                       target={info.href.startsWith('http') ? '_blank' : '_self'}
                       rel={info.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                      className="text-white hover:text-primary-400 transition-colors duration-300 font-mono"
+                      className="text-gray-300 hover:text-white transition-colors duration-300 font-mono"
                     >
                       {info.value}
                     </a>
@@ -108,56 +108,56 @@ export function ContactSection() {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6 font-mono">
               Connect With Me
             </h3>
-            
+
             <div className="grid grid-cols-2 gap-4">
               <motion.a
                 href="https://github.com/Ahyarnur"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-primary-400/20 hover:bg-white/10 transition-all duration-300 border-glow group"
+                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 border-glow group"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Github className="w-8 h-8 mx-auto mb-3 text-white group-hover:text-primary-400 transition-colors duration-300" />
-                <h4 className="font-semibold text-white group-hover:text-primary-400 transition-colors duration-300 font-mono">GitHub</h4>
-                <p className="text-sm text-gray-400 font-mono">@Ahyarnur</p>
+                <Github className="w-8 h-8 mx-auto mb-3 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                <h4 className="font-semibold text-gray-300 group-hover:text-white transition-colors duration-300 font-mono">GitHub</h4>
+                <p className="text-sm text-gray-500 font-mono">@Ahyarnur</p>
               </motion.a>
 
               <motion.a
                 href="https://www.linkedin.com/in/hyrichwan/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-primary-400/20 hover:bg-white/10 transition-all duration-300 border-glow group"
+                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 border-glow group"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Linkedin className="w-8 h-8 mx-auto mb-3 text-white group-hover:text-primary-400 transition-colors duration-300" />
-                <h4 className="font-semibold text-white group-hover:text-primary-400 transition-colors duration-300 font-mono">LinkedIn</h4>
-                <p className="text-sm text-gray-400 font-mono">Professional</p>
+                <Linkedin className="w-8 h-8 mx-auto mb-3 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                <h4 className="font-semibold text-gray-300 group-hover:text-white transition-colors duration-300 font-mono">LinkedIn</h4>
+                <p className="text-sm text-gray-500 font-mono">Professional</p>
               </motion.a>
 
               <motion.a
                 href="https://www.instagram.com/ahyarrrrrrrrrr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-primary-400/20 hover:bg-white/10 transition-all duration-300 border-glow group"
+                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 border-glow group"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Instagram className="w-8 h-8 mx-auto mb-3 text-white group-hover:text-primary-400 transition-colors duration-300" />
-                <h4 className="font-semibold text-white group-hover:text-primary-400 transition-colors duration-300 font-mono">Instagram</h4>
-                <p className="text-sm text-gray-400 font-mono">@ahyarrrrrrrrrr</p>
+                <Instagram className="w-8 h-8 mx-auto mb-3 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                <h4 className="font-semibold text-gray-300 group-hover:text-white transition-colors duration-300 font-mono">Instagram</h4>
+                <p className="text-sm text-gray-500 font-mono">@ahyarrrrrrrrrr</p>
               </motion.a>
 
               <motion.a
-                href="mailto:ahyarnurichwan@gmail.com"
-                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-primary-400/20 hover:bg-white/10 transition-all duration-300 border-glow group"
+                href="mailto:ahyarahyar5741@gmail.com"
+                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 border-glow group"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Mail className="w-8 h-8 mx-auto mb-3 text-white group-hover:text-primary-400 transition-colors duration-300" />
-                <h4 className="font-semibold text-white group-hover:text-primary-400 transition-colors duration-300 font-mono">Email</h4>
-                <p className="text-sm text-gray-400 font-mono">Direct Contact</p>
+                <Mail className="w-8 h-8 mx-auto mb-3 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                <h4 className="font-semibold text-gray-300 group-hover:text-white transition-colors duration-300 font-mono">Email</h4>
+                <p className="text-sm text-gray-500 font-mono">Direct Contact</p>
               </motion.a>
             </div>
           </motion.div>

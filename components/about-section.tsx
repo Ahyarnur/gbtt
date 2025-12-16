@@ -23,7 +23,7 @@ export function AboutSection() {
   ]
 
   return (
-    <section id="about" className="py-12 md:py-16 lg:py-20 bg-dark-50 dark:bg-custom-black transition-colors duration-300 texture-lines">
+    <section id="about" className="py-12 md:py-16 lg:py-20 bg-background transition-colors duration-300 texture-lines">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -35,7 +35,7 @@ export function AboutSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-4 md:mb-6 font-mono">
             About Me
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto font-mono">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-mono">
             A passionate student combining cybersecurity knowledge with modern web development
           </p>
         </motion.div>
@@ -50,7 +50,7 @@ export function AboutSection() {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6 font-mono">
               My Journey
             </h3>
-            <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed font-mono text-sm md:text-base">
+            <div className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed font-mono text-sm md:text-base">
               <p>
                 I am a student of the Cyber Security Engineering program at Politeknik Negeri Cilacap,
                 with a strong passion for technology—especially in web development and cybersecurity.
@@ -82,14 +82,14 @@ export function AboutSection() {
             {skills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className="p-4 md:p-6 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group border border-primary-400/20 border-glow"
+                className="p-4 md:p-6 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group border border-white/10 border-glow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="flex items-center mb-3">
-                  <div className="p-2 md:p-3 rounded-lg bg-primary-600/20 text-primary-400 mr-3 group-hover:scale-110 transition-transform duration-300 border border-primary-400/30">
+                  <div className="p-2 md:p-3 rounded-lg bg-white/10 text-white mr-3 group-hover:scale-110 transition-transform duration-300 border border-white/10">
                     <skill.icon className="w-5 h-5 md:w-6 md:h-6" />
                   </div>
                   <h4 className="font-semibold text-white text-sm md:text-base font-mono">
@@ -118,7 +118,7 @@ export function AboutSection() {
             {technologies.map((tech, index) => (
               <motion.span
                 key={tech}
-                className="px-3 md:px-4 py-1.5 md:py-2 bg-primary-600/20 text-primary-300 rounded-full text-xs md:text-sm font-medium border border-primary-400/30 hover:border-primary-400/50 transition-all duration-300 font-mono"
+                className="px-3 md:px-4 py-1.5 md:py-2 bg-white/10 text-gray-300 rounded-full text-xs md:text-sm font-medium border border-white/20 hover:border-white/40 transition-all duration-300 font-mono"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4, delay: 1 + index * 0.05 }}
