@@ -13,7 +13,7 @@
 }
 
 /* Light theme */
-:root[data-theme="light"] {
+.light {
   --foreground-rgb: 15, 23, 42;
   --background-start-rgb: 248, 250, 252;
   --background-end-rgb: 248, 250, 252;
@@ -22,7 +22,7 @@
 }
 
 /* Dark theme */
-:root[data-theme="dark"] {
+.dark {
   --foreground-rgb: 248, 250, 252;
   --background-start-rgb: 33, 28, 28;
   --background-end-rgb: 33, 28, 28;
@@ -56,12 +56,9 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   position: relative;
 }
 
@@ -73,26 +70,22 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 2px,
-    rgba(147, 51, 234, 0.03) 2px,
-    rgba(147, 51, 234, 0.03) 4px
-  );
+  background: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 2px,
+      rgba(147, 51, 234, 0.03) 2px,
+      rgba(147, 51, 234, 0.03) 4px);
   pointer-events: none;
   z-index: -1;
 }
 
 /* Light theme background pattern */
 .light body::before {
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 2px,
-    rgba(124, 58, 237, 0.05) 2px,
-    rgba(124, 58, 237, 0.05) 4px
-  );
+  background: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 2px,
+      rgba(124, 58, 237, 0.05) 2px,
+      rgba(124, 58, 237, 0.05) 4px);
 }
 
 a {
@@ -109,13 +102,25 @@ a {
   background: #211c1c;
 }
 
+.light ::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #9333ea;
   border-radius: 3px;
 }
 
+.light ::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: #7c3aed;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #6b21a8;
 }
 
 /* Glass morphism effect */
@@ -131,7 +136,7 @@ a {
   border: 1px solid rgba(147, 51, 234, 0.3);
 }
 
-[data-theme="light"] .glass {
+.light .glass {
   background: rgba(248, 250, 252, 0.8);
   border: 1px solid rgba(124, 58, 237, 0.2);
 }
@@ -145,47 +150,47 @@ a {
   transition: all 0.3s ease;
 }
 
-[data-theme="light"] .glass-blur {
+.light .glass-blur {
   background: rgba(248, 250, 252, 0.85);
   border: 1px solid rgba(124, 58, 237, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* Light theme text colors */
-[data-theme="light"] {
+.light {
   color: rgb(15, 23, 42);
 }
 
-[data-theme="light"] .text-white {
+.light .text-white {
   color: rgb(15, 23, 42) !important;
 }
 
-[data-theme="light"] .text-gray-300 {
+.light .text-gray-300 {
   color: rgb(71, 85, 105) !important;
 }
 
-[data-theme="light"] .text-gray-400 {
+.light .text-gray-400 {
   color: rgb(100, 116, 139) !important;
 }
 
-[data-theme="light"] .text-gray-500 {
+.light .text-gray-500 {
   color: rgb(148, 163, 184) !important;
 }
 
 /* Light theme backgrounds */
-[data-theme="light"] .bg-white\/5 {
+.light .bg-white\/5 {
   background-color: rgba(15, 23, 42, 0.05) !important;
 }
 
-[data-theme="light"] .bg-white\/10 {
+.light .bg-white\/10 {
   background-color: rgba(15, 23, 42, 0.1) !important;
 }
 
-[data-theme="light"] .hover\:bg-white\/10:hover {
+.light .hover\:bg-white\/10:hover {
   background-color: rgba(15, 23, 42, 0.1) !important;
 }
 
-[data-theme="light"] .hover\:bg-white\/5:hover {
+.light .hover\:bg-white\/5:hover {
   background-color: rgba(15, 23, 42, 0.05) !important;
 }
 
@@ -203,9 +208,11 @@ a {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -213,7 +220,7 @@ a {
 
 /* Neon glow effect with updated purple */
 .neon-glow {
-  text-shadow: 
+  text-shadow:
     0 0 5px #9333ea,
     0 0 10px #9333ea,
     0 0 15px #9333ea,
@@ -230,6 +237,7 @@ a {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -245,6 +253,7 @@ a {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -260,6 +269,7 @@ a {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -268,7 +278,7 @@ a {
 
 /* Grid pattern for animated text background */
 .bg-grid-pattern {
-  background-image: 
+  background-image:
     linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
@@ -276,13 +286,11 @@ a {
 
 /* Texture lines for futuristic effect */
 .texture-lines {
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 2px,
-    rgba(147, 51, 234, 0.05) 2px,
-    rgba(147, 51, 234, 0.05) 4px
-  );
+  background: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 2px,
+      rgba(147, 51, 234, 0.05) 2px,
+      rgba(147, 51, 234, 0.05) 4px);
 }
 
 /* Subtle border glow effect */

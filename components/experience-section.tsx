@@ -84,20 +84,18 @@ export function ExperienceSection() {
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                className={`relative flex items-center ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                }`}
+                className={`relative flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  }`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 md:left-8 lg:left-1/2 transform lg:-translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-custom-black rounded-full border-4 border-primary-500 z-10"></div>
+                <div className="absolute left-6 md:left-8 lg:left-1/2 transform lg:-translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-white dark:bg-custom-black rounded-full border-4 border-primary-500 z-10"></div>
 
                 {/* Content */}
-                <div className={`ml-12 md:ml-16 lg:ml-0 w-full lg:w-1/2 ${
-                  index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'
-                }`}>
+                <div className={`ml-12 md:ml-16 lg:ml-0 w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'
+                  }`}>
                   <motion.div
                     className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-400/20 border-glow"
                     whileHover={{ scale: 1.02, y: -5 }}

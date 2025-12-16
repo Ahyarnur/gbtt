@@ -51,10 +51,6 @@ module.exports = {
           light: '#f8fafc',
         }
       },
-      darkMode: ['class', '[data-theme="dark"]'],
-      data: {
-        theme: '[data-theme]'
-      },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',

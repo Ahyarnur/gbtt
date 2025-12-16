@@ -44,7 +44,7 @@ export function EducationSection() {
   ]
 
   return (
-    <section id="education" className="py-12 md:py-16 lg:py-20 bg-custom-black transition-colors duration-300 texture-lines">
+    <section id="education" className="py-12 md:py-16 lg:py-20 bg-dark-50 dark:bg-custom-black transition-colors duration-300 texture-lines">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -81,19 +81,18 @@ export function EducationSection() {
                       <h3 className="text-xl md:text-2xl font-bold text-white font-mono">
                         {edu.institution}
                       </h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium font-mono ${
-                        edu.status === 'Currently Enrolled' 
-                          ? 'bg-primary-600/20 text-primary-400 border border-primary-400/30' 
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium font-mono ${edu.status === 'Currently Enrolled'
+                          ? 'bg-primary-600/20 text-primary-400 border border-primary-400/30'
                           : 'bg-green-600/20 text-green-400 border border-green-400/30'
-                      }`}>
+                        }`}>
                         {edu.status}
                       </span>
                     </div>
-                    
+
                     <h4 className="text-lg text-primary-400 font-mono mb-4">
                       {edu.degree}
                     </h4>
-                    
+
                     <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-2 sm:space-y-0 text-sm text-gray-400 mb-4">
                       <div className="flex items-center space-x-2">
                         <Calendar className="w-4 h-4" />
@@ -104,7 +103,7 @@ export function EducationSection() {
                         <span className="font-mono">{edu.location}</span>
                       </div>
                     </div>
-                    
+
                     <p className="text-gray-300 font-mono leading-relaxed mb-6">
                       {edu.description}
                     </p>

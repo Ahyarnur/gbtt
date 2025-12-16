@@ -18,12 +18,12 @@ export function AboutSection() {
   ]
 
   const technologies = [
-    'Laravel', 'PHP', 'React', 'Next.js', 'TypeScript', 'TailwindCSS', 
+    'Laravel', 'PHP', 'React', 'Next.js', 'TypeScript', 'TailwindCSS',
     'JavaScript', 'HTML5', 'CSS3', 'Figma', 'Git', 'MySQL'
   ]
 
   return (
-    <section id="about" className="py-12 md:py-16 lg:py-20 bg-custom-black transition-colors duration-300 texture-lines">
+    <section id="about" className="py-12 md:py-16 lg:py-20 bg-dark-50 dark:bg-custom-black transition-colors duration-300 texture-lines">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -52,21 +52,21 @@ export function AboutSection() {
             </h3>
             <div className="space-y-3 md:space-y-4 text-gray-300 leading-relaxed font-mono text-sm md:text-base">
               <p>
-                I am a student of the Cyber Security Engineering program at Politeknik Negeri Cilacap, 
+                I am a student of the Cyber Security Engineering program at Politeknik Negeri Cilacap,
                 with a strong passion for technology—especially in web development and cybersecurity.
               </p>
               <p>
-                Previously, I studied at SMK Ma'arif NU 1 Ajibarang in Purwokerto, where I focused on 
-                web development and gained hands-on experience working with Laravel, TailwindCSS, and PHP 
+                Previously, I studied at SMK Ma'arif NU 1 Ajibarang in Purwokerto, where I focused on
+                web development and gained hands-on experience working with Laravel, TailwindCSS, and PHP
                 to build responsive and efficient web applications.
               </p>
               <p>
-                In addition to my technical skills, I'm also exploring UI/UX design using tools like 
-                Figma, Adobe Photoshop, Adobe Lightroom, and Canva. I am highly enthusiastic about 
+                In addition to my technical skills, I'm also exploring UI/UX design using tools like
+                Figma, Adobe Photoshop, Adobe Lightroom, and Canva. I am highly enthusiastic about
                 learning new technologies and always stay up-to-date with the latest trends in the tech world.
               </p>
               <p>
-                I see every advancement as an opportunity to grow, adapt, and contribute meaningfully 
+                I see every advancement as an opportunity to grow, adapt, and contribute meaningfully
                 in today's digital era.
               </p>
             </div>

@@ -78,7 +78,7 @@ export function ProjectsSection() {
   ]
 
   return (
-    <section id="projects" className="py-12 md:py-16 lg:py-20 bg-custom-black transition-colors duration-300 texture-lines">
+    <section id="projects" className="py-12 md:py-16 lg:py-20 bg-dark-50 dark:bg-custom-black transition-colors duration-300 texture-lines">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -115,7 +115,7 @@ export function ProjectsSection() {
                       <p className="text-gray-300 text-xs md:text-sm font-mono">Project Preview</p>
                     </div>
                   </div>
-                  
+
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex space-x-3 md:space-x-4">
@@ -152,7 +152,7 @@ export function ProjectsSection() {
                   <h3 className="text-lg md:text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors duration-300 font-mono">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 mb-4 text-xs md:text-sm leading-relaxed font-mono">
                     {project.description}
                   </p>
