@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Shield, Code, Palette, Lightbulb } from 'lucide-react'
+import TeamShowcase, { TeamMember } from '@/components/ui/team-showcase'
 
 export function AboutSection() {
   const ref = useRef(null)
@@ -15,6 +16,31 @@ export function AboutSection() {
     { icon: Code, name: 'Frontend Development', description: 'React, Next.js, TypeScript, and modern web technologies' },
     { icon: Palette, name: 'UI/UX Design', description: 'Figma, Adobe Creative Suite, and user-centered design' },
     { icon: Lightbulb, name: 'Problem Solving', description: 'Creative solutions and analytical thinking' },
+  ]
+
+  const members: TeamMember[] = [
+    {
+      id: 'ahyar-nur-1',
+      name: 'Ahyar Nur',
+      role: 'Cyber Security Engineering Student',
+      image: '/image/foto1.jpeg',
+      social: {
+        instagram: 'https://instagram.com/',
+        linkedin: 'https://linkedin.com/',
+      },
+    },
+    {
+      id: 'ahyar-nur-2',
+      name: 'Ahyar Nur',
+      role: 'Cyber Security Engineering Student',
+      image: '/image/foto2.jpeg',
+    },
+    {
+      id: 'ahyar-nur-3',
+      name: 'Ahyar Nur',
+      role: 'Cyber Security Engineering Student',
+      image: '/image/foto3.jpeg',
+    },
   ]
 
   const technologies = [
@@ -38,6 +64,28 @@ export function AboutSection() {
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-mono">
             A passionate student combining cybersecurity knowledge with modern web development
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12 md:mb-16 flex justify-center"
+        >
+          <div className="w-full max-w-5xl translate-x-8">
+            <TeamShowcase
+              members={members}
+              showList={false}
+              sideContent={(
+                <div className="pl-6 md:pl-8 mt-8 md:mt-12">
+                  <p className="text-sm md:text-base text-muted-foreground font-mono leading-relaxed">
+                    “I guess this is what is called the irony of life. When I feel smart, I am not appreciated and I get nothing. But when I feel stupid, I can learn something and then become wise." <br />
+                    ― Titon Rahmawan 
+                  </p>
+                </div>
+              )}
+            />
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 md:mb-20">

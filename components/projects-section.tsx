@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'motion/react'
 import { useInView } from 'motion/react'
 import { useRef } from 'react'
-import { HoverEffect } from '@/components/ui/hover-effect'
+import { LinkCard } from '@/components/ui/link-card'
 
 export function ProjectsSection() {
   const ref = useRef(null)
@@ -61,8 +61,17 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto">
-          <HoverEffect items={projects} />
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
+              <LinkCard
+                key={project.title}
+                title={project.title}
+                description={project.description}
+                href={project.link}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
