@@ -31,6 +31,16 @@ export function ProjectsSection() {
       description: 'A website that displays menus at a food stall. Simple and clean design for easy menu browsing and ordering.',
       link: 'https://ahyarnur.github.io/warung-ngapak/',
     },
+    {
+      title: 'Snort IDS with Telegram Bot Notifier',
+      description: 'Intrusion Detection System (IDS) implementation using Snort integrated with a Telegram Bot. This system detects various network anomalies and scans (like Ping and Nmap) and sends real-time alert notifications to Telegram.',
+      link: 'https://github.com/Ahyarnur/Snort-Telegram-IDS',
+    },
+    {
+      title: 'Fail2Ban SSH Brute Force Defense',
+      description: 'Simulation project that demonstrates SSH brute-force defense using Fail2Ban and nftables, including Hydra attack testing and real-time monitoring.',
+      link: 'https://github.com/Ahyarnur/bruteforce-defense-simulation',
+    },
   ]
 
   return (
