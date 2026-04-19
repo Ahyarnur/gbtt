@@ -72,13 +72,13 @@ export function AboutSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-12 md:mb-16 flex justify-center"
         >
-          <div className="w-full max-w-5xl translate-x-8">
+          <div className="w-full max-w-5xl md:translate-x-8">
             <TeamShowcase
               members={members}
               showList={false}
               sideContent={(
-                <div className="pl-6 md:pl-8 mt-8 md:mt-12">
-                  <p className="text-sm md:text-base text-muted-foreground font-mono leading-relaxed">
+                <div className="mt-4 sm:mt-6 md:mt-12 pl-0 sm:pl-6 md:pl-8 text-center md:text-left">
+                  <p className="text-sm md:text-base text-muted-foreground font-mono leading-relaxed max-w-prose mx-auto md:mx-0">
                     “I guess this is what is called the irony of life. When I feel smart, I am not appreciated and I get nothing. But when I feel stupid, I can learn something and then become wise." <br />
                     ― Titon Rahmawan 
                   </p>

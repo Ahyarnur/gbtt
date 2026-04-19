@@ -46,38 +46,38 @@ export default function TeamShowcase({ members, showList = true, sideContent }: 
   }
 
   return (
-    <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 lg:gap-10 select-none w-full max-w-5xl mx-auto py-6 px-0 md:px-0 font-sans">
-      <div className="flex gap-3 md:gap-4 flex-shrink-0 overflow-x-auto pb-1 md:pb-0">
-        <div className="flex flex-col gap-3 md:gap-4">
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 lg:gap-10 select-none w-full max-w-5xl mx-auto py-6 px-0 md:px-0 font-sans">
+      <div className="flex gap-2.5 sm:gap-3 md:gap-4 flex-shrink-0 overflow-x-auto pb-1 md:pb-0 w-full md:w-auto">
+        <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4">
           {col1.map((member) => (
             <PhotoCard
               key={member.id}
               member={member}
-              className="w-[150px] h-[185px] sm:w-[175px] sm:h-[215px] md:w-[210px] md:h-[255px]"
+              className="w-[120px] h-[150px] sm:w-[150px] sm:h-[185px] md:w-[210px] md:h-[255px]"
               hoveredId={hoveredId}
               onHover={setHoveredId}
             />
           ))}
         </div>
 
-        <div className="flex flex-col gap-3 md:gap-4 mt-[64px] sm:mt-[78px] md:mt-[96px]">
+        <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4 mt-[40px] sm:mt-[64px] md:mt-[96px]">
           {col2.map((member) => (
             <PhotoCard
               key={member.id}
               member={member}
-              className="w-[168px] h-[205px] sm:w-[195px] sm:h-[238px] md:w-[235px] md:h-[286px]"
+              className="w-[128px] h-[162px] sm:w-[168px] sm:h-[205px] md:w-[235px] md:h-[286px]"
               hoveredId={hoveredId}
               onHover={setHoveredId}
             />
           ))}
         </div>
 
-        <div className="flex flex-col gap-3 md:gap-4 mt-[30px] sm:mt-[38px] md:mt-[46px]">
+        <div className="flex flex-col gap-2.5 sm:gap-3 md:gap-4 mt-[18px] sm:mt-[30px] md:mt-[46px]">
           {col3.map((member) => (
             <PhotoCard
               key={member.id}
               member={member}
-              className="w-[158px] h-[195px] sm:w-[185px] sm:h-[228px] md:w-[220px] md:h-[270px]"
+              className="w-[124px] h-[156px] sm:w-[158px] sm:h-[195px] md:w-[220px] md:h-[270px]"
               hoveredId={hoveredId}
               onHover={setHoveredId}
             />
@@ -97,7 +97,7 @@ export default function TeamShowcase({ members, showList = true, sideContent }: 
           ))}
         </div>
       ) : sideContent ? (
-        <div className="flex items-center md:items-start flex-1 w-full">
+        <div className="flex justify-center md:justify-start items-start flex-1 w-full">
           {sideContent}
         </div>
       ) : null}
