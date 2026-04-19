@@ -6,7 +6,15 @@ import type { Variants } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 interface LinkCardProps
-  extends Omit<React.ComponentPropsWithoutRef<'a'>, 'onDrag' | 'onDragStart' | 'onDragEnd'> {
+  extends Omit<
+    React.ComponentPropsWithoutRef<'a'>,
+    | 'onDrag'
+    | 'onDragStart'
+    | 'onDragEnd'
+    | 'onAnimationStart'
+    | 'onAnimationEnd'
+    | 'onAnimationIteration'
+  > {
   title: string
   description: string
   href: string
