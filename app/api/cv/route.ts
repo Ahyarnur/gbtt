@@ -257,8 +257,9 @@ export async function GET() {
   }
 
   const pdfBytes = await pdfDoc.save()
+  const blob = new Blob([pdfBytes], { type: 'application/pdf' })
 
-  return new Response(pdfBytes, {
+  return new Response(blob, {
     headers: {
       'Content-Type': 'application/pdf',
       'Content-Disposition': 'attachment; filename="cv-ahyar.pdf"',
