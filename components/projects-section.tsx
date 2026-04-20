@@ -33,7 +33,7 @@ export function ProjectsSection() {
     },
     {
       title: 'Snort IDS with Telegram Bot Notifier',
-      description: 'Intrusion Detection System (IDS) implementation using Snort integrated with a Telegram Bot. This system detects various network anomalies and scans (like Ping and Nmap) and sends real-time alert notifications to Telegram.',
+      description: 'Snort-based IDS with Telegram alerts for real-time anomaly and scan detection.',
       link: 'https://github.com/Ahyarnur/Snort-Telegram-IDS',
     },
     {

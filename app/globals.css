@@ -26,6 +26,8 @@
     --input: 0 0% 15%;
     --ring: 0 0% 83%;
     --radius: 0.5rem;
+    --cyber-accent: 140 100% 45%;
+    --cyber-accent-strong: 140 100% 55%;
   }
 }
 
@@ -186,4 +188,62 @@ body {
 .border-glow:hover {
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Cybersecurity theme helpers */
+.cyber-bg {
+  position: relative;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, rgba(0, 255, 140, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 80% 20%, rgba(0, 200, 255, 0.08), transparent 55%),
+    #0a0a0a;
+  overflow: hidden;
+}
+
+.cyber-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 140, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 140, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.cyber-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 255, 140, 0.12),
+    transparent
+  );
+  animation: scanline 6s linear infinite;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.neon-text {
+  color: hsl(var(--cyber-accent));
+  text-shadow:
+    0 0 8px rgba(0, 255, 140, 0.6),
+    0 0 16px rgba(0, 255, 140, 0.35);
+}
+
+.neon-border {
+  border: 1px solid rgba(0, 255, 140, 0.35);
+  box-shadow: 0 0 12px rgba(0, 255, 140, 0.2);
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }

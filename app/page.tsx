@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <WelcomeIntro />
-      <main className="min-h-screen bg-background transition-colors duration-300">
+      <main className="min-h-screen bg-background transition-colors duration-300 cyber-bg">
         <HorizontalNavigation />
 
         <HeroSection />

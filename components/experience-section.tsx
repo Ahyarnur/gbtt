@@ -12,7 +12,75 @@ export function ExperienceSection() {
 
   const experiences = [
     {
-      type: 'work',
+      type: 'organization',
+      icon: Briefcase,
+      title: 'JKB Learning Center',
+      period: '2026',
+      location: 'Cilacap, Indonesia',
+      description: 'Learning development program organized by the student organization',
+      details: [
+        'Supported logistics as a equipment division member',
+        'Prepared technical needs and event supplies',
+        'Ensured smooth event operations through equipment management'
+      ]
+    },
+    {
+      type: 'organization',
+      icon: Briefcase,
+      title: 'JKB Fest',
+      period: '2026',
+      location: 'Cilacap, Indonesia',
+      description: 'Organization event focused on creative and collaborative activities',
+      details: [
+        'Led the PR committee as Public Relations Coordinator',
+        'Managed communication and publicity strategy for the event',
+        'Coordinated the PR team for promotions and outreach',
+        'Built external relationships to support event success'
+      ]
+    },
+    {
+      type: 'organization',
+      icon: Briefcase,
+      title: 'Study Banding HIMATRIS & HIMTI UNSIQ',
+      period: '2025',
+      location: 'Indonesia',
+      description: 'Inter-organization collaboration event for knowledge sharing',
+      details: [
+        'Served as Event Committee Coordinator',
+        'Planned and executed the event program and agenda',
+        'Coordinated the team to ensure activities ran on schedule',
+        'Handled communication with external parties'
+      ]
+    },
+    {
+      type: 'organization',
+      icon: Briefcase,
+      title: 'Himpunan Mahasiswa Komputer dan Bisnis (HIMATRIS)',
+      period: '2025 - Present',
+      location: 'Cilacap, Indonesia',
+      description: 'Active member in the student organization public relations division',
+      details: [
+        'Managed internal and external communication as a PR team member',
+        'Supported event publicity and strengthened organization branding on campus',
+        'Contributed to information dissemination through social media and promotions'
+      ]
+    },
+    {
+      type: 'organization',
+      icon: GraduationCap,
+      title: 'Politeknik Negeri Cilacap',
+      period: '2025 - Present',
+      location: 'Cilacap, Indonesia',
+      description: 'Currently pursuing Cybersecurity Engineering degree',
+      details: [
+        'Studying Cybersecurity Engineering program',
+        'Learning network security, ethical hacking, and security protocols',
+        'Combining cybersecurity knowledge with web development skills',
+        'Expected graduation: 2028'
+      ]
+    },
+    {
+      type: 'organization',
       icon: Briefcase,
       title: 'Field Work Practice at PT CAZH',
       period: '2024',
@@ -26,7 +94,7 @@ export function ExperienceSection() {
       ]
     },
     {
-      type: 'education',
+      type: 'organization',
       icon: GraduationCap,
       title: 'SMK Ma\'arif NU 1 Ajibarang',
       period: '2022 - 2025',
@@ -37,20 +105,6 @@ export function ExperienceSection() {
         'Learned modern web technologies including Laravel, PHP, and frontend frameworks',
         'Completed multiple web development projects',
         'Graduated with expertise in full-stack web development'
-      ]
-    },
-    {
-      type: 'education',
-      icon: GraduationCap,
-      title: 'Politeknik Negeri Cilacap',
-      period: '2025 - Present',
-      location: 'Cilacap, Indonesia',
-      description: 'Currently pursuing Cybersecurity Engineering degree',
-      details: [
-        'Studying Cybersecurity Engineering program',
-        'Learning network security, ethical hacking, and security protocols',
-        'Combining cybersecurity knowledge with web development skills',
-        'Expected graduation: 2028'
       ]
     }
   ]
