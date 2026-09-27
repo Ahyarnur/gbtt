@@ -14,6 +14,21 @@ export function ExperienceSection() {
     {
       type: 'organization',
       icon: Briefcase,
+      title: 'Head of Public Relations Division - HIMATRIS',
+      period: 'Jun 2026 - Present',
+      location: 'Cilacap, Indonesia',
+      description: 'Head of Public Relations Division',
+      details: [
+        'Lead the division in managing communication and relationships between the organization and external parties',
+        'Coordinate division members and plan and monitor public relations programs',
+        'Manage external communications and ensure organizational information is conveyed effectively and professionally',
+        'Work closely with the Chair and other division leads to coordinate external collaborations, delegations, invitations, and partnerships',
+        'Ensure each public relations activity supports the organization\'s goals'
+      ]
+    },
+    {
+      type: 'organization',
+      icon: Briefcase,
       title: 'JKB Learning Center',
       period: '2026',
       location: 'Cilacap, Indonesia',
@@ -56,9 +71,9 @@ export function ExperienceSection() {
       type: 'organization',
       icon: Briefcase,
       title: 'Himpunan Mahasiswa Komputer dan Bisnis (HIMATRIS)',
-      period: '2025 - Present',
+      period: '2025 - 2026',
       location: 'Cilacap, Indonesia',
-      description: 'Active member in the student organization public relations division',
+      description: 'Member of the student organizations public relations division',
       details: [
         'Managed internal and external communication as a PR team member',
         'Supported event publicity and strengthened organization branding on campus',
