@@ -79,7 +79,7 @@ export function AboutSection() {
               sideContent={(
                 <div className="mt-4 sm:mt-6 md:mt-12 pl-0 sm:pl-6 md:pl-8 text-center md:text-left">
                   <p className="text-sm md:text-base text-muted-foreground font-mono leading-relaxed max-w-prose mx-auto md:mx-0">
-                    “I guess this is what is called the irony of life. When I feel smart, I am not appreciated and I get nothing. But when I feel stupid, I can learn something and then become wise." <br />
+                    &ldquo;I guess this is what is called the irony of life. When I feel smart, I am not appreciated and I get nothing. But when I feel stupid, I can learn something and then become wise.&rdquo; <br />
                     ― Titon Rahmawan 
                   </p>
                 </div>
@@ -104,18 +104,18 @@ export function AboutSection() {
                 with a strong passion for technology—especially in web development and cybersecurity.
               </p>
               <p>
-                Previously, I studied at SMK Ma'arif NU 1 Ajibarang in Purwokerto, where I focused on
+                Previously, I studied at SMK Ma&apos;arif NU 1 Ajibarang in Purwokerto, where I focused on
                 web development and gained hands-on experience working with Laravel, TailwindCSS, and PHP
                 to build responsive and efficient web applications.
               </p>
               <p>
-                In addition to my technical skills, I'm also exploring UI/UX design using tools like
+                In addition to my technical skills, I&apos;m also exploring UI/UX design using tools like
                 Figma, Adobe Photoshop, Adobe Lightroom, and Canva. I am highly enthusiastic about
                 learning new technologies and always stay up-to-date with the latest trends in the tech world.
               </p>
               <p>
                 I see every advancement as an opportunity to grow, adapt, and contribute meaningfully
-                in today's digital era.
+                in today&apos;s digital era.
               </p>
             </div>
           </motion.div>

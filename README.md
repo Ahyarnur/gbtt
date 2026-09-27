@@ -1,26 +1,28 @@
 # Ahyar Nur Ichwan - Portfolio Website
 
-A modern, futuristic, and minimalist portfolio website built with Next.js, featuring a purple and black color scheme with dark/light mode toggle and smooth scrolling animations.
+A modern, futuristic, and minimalist portfolio website built with Next.js, featuring a dark monochrome color scheme with a cybersecurity-green accent and smooth scrolling animations.
 
 ## ✨ Features
 
-- **🎨 Modern Design**: Futuristic and minimalist UI with purple and black color scheme
-- **🌙 Dark/Light Mode**: Seamless theme switching with system preference detection
+- **🎨 Modern Design**: Futuristic and minimalist UI with a monochrome dark theme and cyber-green accents
 - **📱 Responsive**: Fully responsive design that works on all devices
-- **⚡ Performance**: Built with Next.js 14 and optimized for speed
-- **🎭 Animations**: Smooth scroll-triggered animations using Framer Motion
-- **🎯 Animated Text**: Custom scrolling text animation featuring your name and skills
+- **⚡ Performance**: Built with Next.js 16 (App Router, Turbopack) and optimized for speed
+- **🎭 Animations**: Smooth scroll-triggered animations using Framer Motion / Motion
+- **🧊 WebGL Hero**: Interactive dot-screen shader background with mouse trail (react-three-fiber)
+- **🎯 Animated Text**: Custom scrolling text animation featuring name and skills
+- **📄 Dynamic CV**: Generated on the fly as a PDF via the `/api/cv` route
 - **🔧 TypeScript**: Fully typed for better development experience
 - **🎨 Tailwind CSS**: Utility-first CSS framework for rapid styling
 
 ## 🚀 Tech Stack
 
-- **Framework**: Next.js 14
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Theme**: next-themes
-- **Icons**: Lucide React
+- **Animations**: Framer Motion / Motion
+- **3D**: react-three-fiber + drei + three
+- **PDF**: pdf-lib
+- **Icons**: Lucide React, React Icons
 - **Components**: Custom components with 21st.dev inspiration
 
 ## 🛠️ Installation
@@ -47,45 +49,51 @@ npm run dev
 
 ```
 ├── app/                    # Next.js app directory
+│   ├── api/cv/route.ts    # PDF CV generator (pdf-lib)
 │   ├── globals.css        # Global styles and Tailwind imports
 │   ├── layout.tsx         # Root layout component
 │   └── page.tsx           # Main page component
 ├── components/            # React components
-│   ├── navigation.tsx     # Navigation bar with theme toggle
-│   ├── hero-section.tsx   # Hero section with profile
+│   ├── horizontal-navigation.tsx # Floating nav (desktop) + mobile menu
+│   ├── welcome-intro.tsx  # Splash intro (commits-grid)
+│   ├── hero-section.tsx   # Hero section with WebGL shader
 │   ├── animated-text.tsx  # Scrolling text animation
 │   ├── about-section.tsx  # About section with skills
-│   ├── experience-section.tsx # Timeline of experience/education
+│   ├── stack-section.tsx  # Tech stack feature cards
+│   ├── experience-section.tsx # Timeline of experience
+│   ├── education-section.tsx  # Education cards
 │   ├── projects-section.tsx   # Featured projects showcase
-│   └── theme-provider.tsx # Theme context provider
+│   ├── contact-section.tsx    # Contact and social links
+│   └── ui/                # Reusable UI primitives
 ├── lib/                   # Utility functions
 │   └── utils.ts          # Tailwind class utilities
 ├── public/               # Static assets
-│   └── git.png          # Profile image
+│   └── image/           # Profile images
 └── ...config files       # Configuration files
 ```
 
 ## 🎨 Design Features
 
 ### Color Scheme
-- **Primary**: Purple gradient (#a855f7 to #9333ea)
-- **Dark**: Deep black (#0f172a) with dark grays
-- **Light**: Clean whites with subtle grays
-- **Accent**: Purple highlights and gradients
+- **Base**: Near-black (#0a0a0a / #121212) with dark grays
+- **Foreground**: Clean whites and light grays
+- **Accent**: Cybersecurity green (HSL 140 100% 45%)
 
 ### Animations
 - **Scroll Animations**: Elements animate into view as you scroll
 - **Hover Effects**: Interactive hover states on buttons and cards
-- **Theme Transitions**: Smooth transitions when switching themes
-- **Text Animation**: Custom scrolling text with your name and skills
+- **WebGL Shader**: Mouse-reactive dot grid in the hero
+- **Text Animation**: Custom scrolling text bar with name and skills
 
 ### Layout
-- **Hero Section**: Large profile image with animated background
-- **Animated Text**: Scrolling text bar with your name and skills
-- **About Section**: Skills showcase with animated cards
-- **Experience Timeline**: Animated timeline of your journey
+- **Hero Section**: Full-screen WebGL shader background with terminal motif
+- **Animated Text**: Scrolling text bar with name and skills
+- **About Section**: Photo showcase, journey story, and skill cards
+- **Stack Section**: Feature cards describing the tech stack
+- **Experience Timeline**: Animated timeline of experience
 - **Projects Grid**: Modern project cards with hover effects
-- **Responsive Navigation**: Mobile-friendly navigation with theme toggle
+- **Contact Section**: Contact info and social links
+- **Responsive Navigation**: Floating desktop nav + mobile bottom menu
 
 ## 🔧 Customization
 
@@ -104,14 +112,6 @@ The website is fully responsive and optimized for:
 - **Desktop**: Full layout with side-by-side content
 - **Tablet**: Adapted grid layouts and spacing
 - **Mobile**: Stacked layouts with touch-friendly interactions
-
-## 🌙 Dark Mode
-
-The website includes a sophisticated dark mode implementation:
-- **System Preference**: Automatically detects user's system theme
-- **Manual Toggle**: Theme toggle button in navigation
-- **Smooth Transitions**: All elements transition smoothly between themes
-- **Persistent**: Theme preference is saved and restored
 
 ## 🚀 Deployment
 

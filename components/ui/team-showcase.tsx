@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { FaLinkedinIn, FaTwitter, FaBehance, FaInstagram } from 'react-icons/fa'
 import { cn } from '@/lib/utils'
 
@@ -122,17 +123,19 @@ function PhotoCard({
   return (
     <div
       className={cn(
-        'overflow-hidden rounded-xl cursor-pointer flex-shrink-0 transition-opacity duration-400',
+        'relative overflow-hidden rounded-xl cursor-pointer flex-shrink-0 transition-opacity duration-400',
         className,
         isDimmed ? 'opacity-60' : 'opacity-100'
       )}
       onMouseEnter={() => onHover(member.id)}
       onMouseLeave={() => onHover(null)}
     >
-      <img
+      <Image
         src={member.image}
         alt={member.name}
-        className="w-full h-full object-cover transition-[filter] duration-500"
+        fill
+        sizes="(max-width: 640px) 170px, (max-width: 768px) 240px, 235px"
+        className="object-cover transition-[filter] duration-500"
         style={{
           filter: isActive ? 'grayscale(0) brightness(1)' : 'grayscale(1) brightness(0.77)',
         }}

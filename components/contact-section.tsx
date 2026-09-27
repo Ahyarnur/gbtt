@@ -51,7 +51,7 @@ export function ContactSection() {
             Get In Touch
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-mono">
-            Let's connect and discuss opportunities or collaborations
+            Let&apos;s connect and discuss opportunities or collaborations
           </p>
         </motion.div>
 

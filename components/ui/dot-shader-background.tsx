@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useEffect } from 'react'
+import { useMemo } from 'react'
 import { Canvas, ThreeEvent, useFrame, useThree } from '@react-three/fiber'
 import { shaderMaterial, useTrailTexture } from '@react-three/drei'
 import * as THREE from 'three'
@@ -97,18 +97,18 @@ const DotMaterial = shaderMaterial(
   `
 )
 
+const themeColors = {
+    dotColor: '#FFFFFF',
+    bgColor: '#121212',
+    dotOpacity: 0.025
+}
+
 function Scene() {
     const size = useThree((s) => s.size)
     const viewport = useThree((s) => s.viewport)
 
     const rotation = 0
     const gridSize = 100
-
-    const themeColors = {
-        dotColor: '#FFFFFF',
-        bgColor: '#121212',
-        dotOpacity: 0.025
-    }
 
     const [trail, onMove] = useTrailTexture({
         size: 512,
@@ -121,16 +121,16 @@ function Scene() {
     })
 
     const dotMaterial = useMemo(() => {
-        return new DotMaterial()
+        const material = new DotMaterial()
+        material.uniforms.dotColor.value.setHex(themeColors.dotColor.replace('#', '0x'))
+        material.uniforms.bgColor.value.setHex(themeColors.bgColor.replace('#', '0x'))
+        material.uniforms.dotOpacity.value = themeColors.dotOpacity
+        return material
     }, [])
 
-    useEffect(() => {
-        dotMaterial.uniforms.dotColor.value.setHex(themeColors.dotColor.replace('#', '0x'))
-        dotMaterial.uniforms.bgColor.value.setHex(themeColors.bgColor.replace('#', '0x'))
-        dotMaterial.uniforms.dotOpacity.value = themeColors.dotOpacity
-    }, [dotMaterial, themeColors])
-
     useFrame((state) => {
+        // Mutation is required: three.js uniforms are updated imperatively every frame.
+        // eslint-disable-next-line react-hooks/immutability
         dotMaterial.uniforms.time.value = state.clock.elapsedTime
     })
 

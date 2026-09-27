@@ -1,4 +1,4 @@
-import { PDFDocument, StandardFonts, rgb } from 'pdf-lib'
+import { PDFDocument, StandardFonts, rgb, type PDFFont } from 'pdf-lib'
 
 const PAGE_WIDTH = 595.28
 const PAGE_HEIGHT = 841.89
@@ -95,7 +95,7 @@ const education = [
   }
 ]
 
-function wrapText(text: string, maxWidth: number, font: any, size: number) {
+function wrapText(text: string, maxWidth: number, font: PDFFont, size: number) {
   const words = text.split(' ')
   const lines: string[] = []
   let currentLine = ''
