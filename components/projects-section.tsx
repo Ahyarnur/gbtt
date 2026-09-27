@@ -27,9 +27,9 @@ export function ProjectsSection() {
       link: 'https://github.com/Ahyarnur/desa-kranggan',
     },
     {
-      title: 'Warung Ngapak',
-      description: 'A website that displays menus at a food stall. Simple and clean design for easy menu browsing and ordering.',
-      link: 'https://ahyarnur.github.io/warung-ngapak/',
+      title: 'Segara Anakan Hub',
+      description: 'A smart village & coastal management platform with flood early-warning, tourism booking, and a local marketplace. Built with Next.js 14 and Tailwind CSS.',
+      link: 'https://github.com/Ahyarnur/Sagara',
     },
     {
       title: 'Snort IDS with Telegram Bot Notifier',
